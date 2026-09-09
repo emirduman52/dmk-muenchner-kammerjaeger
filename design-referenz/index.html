@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schädlingsbekämpfung München — DMK Die Münchner Kammerjäger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Manrope:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="nd"><div class="wrap">
+  <span><span class="puls"></span>24-Stunden-Notdienst — auch am Wochenende und an Feiertagen</span>
+  <span>Direkt sprechen: <a href="tel:+491603443836">0160 344 38 36</a></span>
+</div></div>
+<header class="top">
+  <div class="wrap">
+    <a href="index.html" class="logo"><img src="dmk-logo.png" alt="DMK – Die Münchner Kammerjäger" style="height:58px;width:auto"></a>
+    <nav class="navlinks">
+      <a href="index.html" aria-current="page">Startseite</a>
+            <a href="dienstleistungen.html">Unsere Dienstleistungen</a>
+            <a href="haccp.html">HACCP</a>
+            <a href="einsatzorte.html">Unsere Einsatzorte</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="ueber-uns.html">Über uns</a>
+    </nav>
+    <a class="btn sm" href="kontakt.html">Kostenlose Einschätzung</a>
+    <button class="burger" aria-expanded="false" aria-label="Menü öffnen" onclick="burger(this)"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobilepanel" id="mobilepanel">
+    <nav>
+      <a href="index.html" aria-current="page">Startseite</a>
+            <a href="dienstleistungen.html">Unsere Dienstleistungen</a>
+            <a href="haccp.html">HACCP</a>
+            <a href="einsatzorte.html">Unsere Einsatzorte</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="ueber-uns.html">Über uns</a>
+      <a class="btn" href="kontakt.html">Kostenlose Einschätzung</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero">
+        <div class="wrap split">
+          <div class="stack">
+            <span class="kicker hell" >
+              Meist am selben Tag vor Ort
+            </span>
+            <h1>
+              Ihr Kammerjäger für <span>München und Umgebung.</span>
+            </h1>
+            <p class="lead" >
+              Wenn Schädlinge da sind, zählt jede Stunde. Wir kommen kurzfristig, arbeiten diskret und sagen
+              Ihnen den Preis, bevor wir anfangen.
+            </p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap" >
+              <a class="btn" href="tel:+491603443836">
+                Jetzt anrufen: 0160 344 38 36
+              </a>
+              <a class="btn dunkel" href="#anfrage">
+                Anfrage senden
+              </a>
+            </div>
+            <div class="vertrauen" >
+              <div>
+                <b>✓</b>
+                <span>Festpreis vor dem Termin — keine versteckten Kosten</span>
+              </div>
+              <div>
+                <b>✓</b>
+                <span>Wirkstoffe schonend für Kinder und Haustiere</span>
+              </div>
+              <div>
+                <b>✓</b>
+                <span>Dokumentation für Vermieter, Behörden und Audits</span>
+              </div>
+              <div>
+                <b>✓</b>
+                <span>Nachkontrolle inklusive</span>
+              </div>
+            </div>
+          </div>
+          <div class="karte" id="anfrage" >
+            <h3 style="margin-bottom:4px">Kostenlose Einschätzung anfragen</h3>
+            <p style="font-size:14px;line-height:20px;margin-bottom:16px">
+              Wir melden uns in der Regel binnen einer Stunde — mit Terminvorschlag und Festpreis.
+            </p>
+            <div class="stufen" id="stufen">
+              <div class="stufe aktiv"><span class="punkt"><span class="nummer">1</span><span class="haken">✓</span></span><span class="stufe-txt">Problem</span></div>
+              <div class="stufe"><span class="punkt"><span class="nummer">2</span><span class="haken">✓</span></span><span class="stufe-txt">Objekt &amp; Termin</span></div>
+              <div class="stufe"><span class="punkt"><span class="nummer">3</span><span class="haken">✓</span></span><span class="stufe-txt">Kontakt</span></div>
+            </div>
+            <form class="form wizard" id="anfrageForm" onsubmit="return anfrage(event)">
+      <fieldset class="schritt-feld">
+        <div class="schritt-kopf"><b>Worum geht es?</b><span>Drei kurze Schritte — in unter einer Minute erledigt.</span></div>
+        <label class="span2">Schädling / Leistung*<select name="Leistung" required>
+          <option value="" disabled selected>Bitte wählen</option>
+          <option>Rattenbekämpfung</option>
+          <option>Mäusebekämpfung</option>
+          <option>Bettwanzenbekämpfung</option>
+          <option>Wespenbekämpfung</option>
+          <option>Ameisenbekämpfung</option>
+          <option>Fliegenbekämpfung</option>
+          <option>Mardervergrämung</option>
+          <option>Taubenvergrämung</option>
+          <option>Wespennest-Entfernung</option>
+          <option>Ungezieferbekämpfung</option>
+          <option>Desinfektion</option>
+          <option>HACCP-Monitoring</option>
+          <option>Weiß ich nicht — bitte beraten</option>
+        </select></label>
+        <label class="span2">Was beobachten Sie?<textarea name="Beschreibung" rows="3" placeholder="Seit wann, in welchem Raum, wie viele Tiere? Je genauer, desto besser können wir einschätzen."></textarea></label>
+      </fieldset>
+      <fieldset class="schritt-feld" hidden disabled>
+        <div class="schritt-kopf"><b>Wo sollen wir hin?</b><span>Fast geschafft — danach fehlt nur noch ein Schritt.</span></div>
+        <label>Objektart*<select name="Objektart" required>
+          <option>Privathaushalt</option><option>Gewerbe / Industrie</option><option>Gastronomie / Lebensmittel</option><option>Hausverwaltung</option>
+        </select></label>
+        <label>Wunschtermin<input name="Wunschtermin" type="date"></label>
+        <label class="span2">Adresse / PLZ*<input name="Adresse" required placeholder="Straße, PLZ, Ort"></label>
+      </fieldset>
+      <fieldset class="schritt-feld" hidden disabled>
+        <div class="schritt-kopf"><b>Wohin dürfen wir antworten?</b><span>Letzter Schritt — dann sind Sie fertig.</span></div>
+        <label>Vorname*<input name="Vorname" required placeholder="Ihr Vorname"></label>
+        <label>Nachname*<input name="Nachname" required placeholder="Ihr Nachname"></label>
+        <label>Telefon*<input name="Telefon" required placeholder="Für den Rückruf"></label>
+        <label>E-Mail*<input name="E-Mail" type="email" required placeholder="name@beispiel.de"></label>
+      </fieldset>
+      <div class="wizard-nav">
+        <button class="btn linie" type="button" id="wZurueck" hidden onclick="wGo(window.wSchritt-1)">Zurück</button>
+        <button class="btn" type="button" id="wWeiter" onclick="wNaechster()">Weiter</button>
+        <button class="btn" type="submit" id="wSenden" hidden>Anfrage absenden</button>
+        <span class="rest" id="wRest">Noch 2 Schritte</span>
+      </div>
+      </form>
+      <p style="margin-top:10px;font-size:12px;line-height:16px;color:#868685">Mit dem Absenden öffnet sich Ihr E-Mail-Programm mit der vorbereiteten Anfrage. Ihre Daten werden ausschließlich zur Bearbeitung verwendet — siehe <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap raster-2">
+          <div style="border-radius:24px;overflow:hidden;height:380px">
+            <div class="h-full">
+              <div class="imgslot" role="img" aria-label="Foto: Selcuk Kirci oder Team im Einsatz (ca. 1200×1000)"><span>Foto: Selcuk Kirci oder Team im Einsatz (ca. 1200×1000)</span></div>
+            </div>
+          </div>
+          <div class="stack">
+            <span class="kicker">Über uns</span>
+            <h2>Ein Ansprechpartner, der selbst vor Ort ist.</h2>
+            <p class="lead">
+              DMK – Die Münchner Kammerjäger ist der Betrieb von Selcuk Kirci. Sie sprechen mit der Person,
+              die anschließend auch bei Ihnen im Haus steht — kein Callcenter, keine wechselnden
+              Subunternehmer.
+            </p>
+            <ul class="liste">
+              <li>
+                <b>✓</b>
+                <span>Erfahrung mit Privathaushalten, Gastronomie, Gewerbe und Hausverwaltungen</span>
+              </li>
+              <li>
+                <b>✓</b>
+                <span>Moderne Verfahren und verantwortungsbewusster Umgang mit Wirkstoffen</span>
+              </li>
+              <li>
+                <b>✓</b>
+                <span>Geschäftszeiten Mo – Fr 08:00 – 20:00 Uhr, am Wochenende Notdienst</span>
+              </li>
+            </ul>
+            <a href="ueber-uns.html" class="btn linie">
+              Mehr über uns
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="band grau">
+        <div class="wrap">
+          <div>
+            <div
+              style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px"
+            >
+              <div class="stack" style="gap:12px">
+                <span class="kicker">Unsere Leistungen</span>
+                <h2>Gegen welchen Schädling brauchen Sie Hilfe?</h2>
+              </div>
+              <a href="dienstleistungen.html" class="btn linie sm">
+                Alle Leistungen ansehen
+              </a>
+            </div>
+          </div>
+          <div class="raster">
+            <a href="dienstleistungen.html" class="leistung" style="color:inherit"><div class="bild"><div class="imgslot" role="img" aria-label="Foto: Rattenbekämpfung"><span>Foto: Rattenbekämpfung</span></div></div><div class="txt"><h4>Rattenbekämpfung</h4><p>Ratten hinterlassen Fraßschäden und Krankheitserreger. Wir bekämpfen den Befall und schließen die Zugänge.</p></div></a>
+            <a href="dienstleistungen.html" class="leistung" style="color:inherit"><div class="bild"><div class="imgslot" role="img" aria-label="Foto: Mäusebekämpfung"><span>Foto: Mäusebekämpfung</span></div></div><div class="txt"><h4>Mäusebekämpfung</h4><p>Mäuse vermehren sich schnell. Wir finden Nester und Laufwege und sichern das Gebäude ab.</p></div></a>
+            <a href="dienstleistungen.html" class="leistung" style="color:inherit"><div class="bild"><div class="imgslot" role="img" aria-label="Foto: Bettwanzenbekämpfung"><span>Foto: Bettwanzenbekämpfung</span></div></div><div class="txt"><h4>Bettwanzenbekämpfung</h4><p>Diskret und gründlich — inklusive Nachkontrolle, damit auch die Eier nicht überleben.</p></div></a>
+            <a href="dienstleistungen.html" class="leistung" style="color:inherit"><div class="bild"><div class="imgslot" role="img" aria-label="Foto: Wespenbekämpfung"><span>Foto: Wespenbekämpfung</span></div></div><div class="txt"><h4>Wespenbekämpfung</h4><p>Nester an Balkon, Rollokasten oder Dach entfernen wir sicher, ohne Sie in Gefahr zu bringen.</p></div></a>
+            <a href="dienstleistungen.html" class="leistung" style="color:inherit"><div class="bild"><div class="imgslot" role="img" aria-label="Foto: Ameisenbekämpfung"><span>Foto: Ameisenbekämpfung</span></div></div><div class="txt"><h4>Ameisenbekämpfung</h4><p>Wir behandeln die Straßen und das Nest, nicht nur die Tiere, die Sie sehen.</p></div></a>
+            <a href="dienstleistungen.html" class="leistung" style="color:inherit"><div class="bild"><div class="imgslot" role="img" aria-label="Foto: Fliegenbekämpfung"><span>Foto: Fliegenbekämpfung</span></div></div><div class="txt"><h4>Fliegenbekämpfung</h4><p>Ursachenbekämpfung statt Spray: Brutstätten finden, entfernen, Wiederbefall verhindern.</p></div></a>
+            <a href="dienstleistungen.html" class="leistung" style="color:inherit"><div class="bild"><div class="imgslot" role="img" aria-label="Foto: Mardervergrämung"><span>Foto: Mardervergrämung</span></div></div><div class="txt"><h4>Mardervergrämung</h4><p>Marder im Dachboden vergrämen und Einstiegsstellen dauerhaft verschließen.</p></div></a>
+            <a href="dienstleistungen.html" class="leistung" style="color:inherit"><div class="bild"><div class="imgslot" role="img" aria-label="Foto: Taubenvergrämung"><span>Foto: Taubenvergrämung</span></div></div><div class="txt"><h4>Taubenvergrämung</h4><p>Tierschutzgerechte Abwehrsysteme gegen Verschmutzung und Bauschäden.</p></div></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap">
+          <div class="stack">
+            <div class="stack" style="gap:12px;margin-bottom:32px">
+              <span class="kicker">So läuft es ab</span>
+              <h2>Drei Schritte bis zur Ruhe.</h2>
+            </div>
+          </div>
+          <div class="schritte">
+        <div class="verbindung" aria-hidden="true"></div>
+        <div class="schritt"><div class="nr">1</div><h3>Anruf oder Formular</h3><p>Sie beschreiben, was Sie beobachten. Wir schätzen ein, wie dringend es ist, und nennen den Preis.</p></div>
+        <div class="schritt"><div class="nr">2</div><h3>Einsatz vor Ort</h3><p>Wir kommen kurzfristig, behandeln gezielt und dokumentieren, was gemacht wurde.</p></div>
+        <div class="schritt"><div class="nr">3</div><h3>Nachkontrolle</h3><p>Wir prüfen nach, ob der Befall wirklich weg ist — und sichern Zugänge, damit er nicht zurückkommt.</p></div>
+      </div>
+        </div>
+      </section>
+
+      <section class="band dunkel">
+        <div class="wrap raster-2">
+          <div class="stack">
+            <span class="kicker hell">Für Gewerbekunden</span>
+            <h2>HACCP-Konzept, Monitoring und Prävention.</h2>
+            <p class="lead" style="color:#d8d8d4">
+              Für Betriebe im Lebensmittelbereich ist ein funktionierendes HACCP-Konzept gesetzlich
+              vorgeschrieben. Wir übernehmen Schädlingsmonitoring, Köderstationen, Lagepläne und die
+              vollständige Dokumentation für Audits und Behörden.
+            </p>
+            <a href="haccp.html" class="btn">
+              HACCP-Leistungen ansehen
+            </a>
+          </div>
+          <ul class="liste" style="color:#e4e4e0;align-self:center">
+            <li>
+              <b>✓</b>
+              <span>Gastronomie, Hotels, Catering</span>
+            </li>
+            <li>
+              <b>✓</b>
+              <span>Bäckereien und Metzgereien</span>
+            </li>
+            <li>
+              <b>✓</b>
+              <span>Lebensmittelproduktion und -verarbeitung</span>
+            </li>
+            <li>
+              <b>✓</b>
+              <span>Lager- und Logistikunternehmen</span>
+            </li>
+            <li>
+              <b>✓</b>
+              <span>Kontrollberichte, Maßnahmenprotokolle, Nachweise</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="band grau">
+        <div class="wrap">
+          <div>
+            <div class="stack" style="gap:12px;margin-bottom:28px">
+              <span class="kicker">Unsere Einsatzorte</span>
+              <h2>Regional aufgestellt — deshalb sind wir schnell da.</h2>
+              <p class="lead" style="max-width:60ch">
+                Unser Service umfasst unter anderem folgende Regionen. Auch kurzfristige Einsätze sind durch
+                unsere flexible Einsatzplanung möglich.
+              </p>
+            </div>
+          </div>
+          <div class="orte">
+            <span>München Stadtgebiet</span>
+            <span>Landkreis München</span>
+            <span>Gräfelfing</span>
+            <span>Weilheim in Oberbayern</span>
+            <span>Wörth</span>
+            <span>Oberbayern &amp; Niederbayern</span>
+          </div>
+          <div>
+            <a href="einsatzorte.html" class="btn linie" style="margin-top:24px">
+              Alle Einsatzorte
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+      <div class="wrap">
+        <div class="cta">
+          <div class="stack" style="gap:12px">
+            <h2>Schädlingsproblem? Wir sind für Sie da.</h2>
+            <p class="lead" style="color:#d8d8d4;max-width:54ch">Kontaktieren Sie uns noch heute. Wir finden eine schnelle Lösung und sorgen dafür, dass Ihr Zuhause oder Betrieb schädlingsfrei bleibt.</p>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn" href="tel:+491603443836">0160 344 38 36</a>
+            <a class="btn dunkel" href="kontakt.html">Kontaktseite</a>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+<footer class="fuss">
+  <div class="wrap">
+    <div class="spalten">
+      <div>
+        <img src="dmk-logo.png" alt="DMK – Die Münchner Kammerjäger">
+        <p style="margin-top:16px;max-width:34ch">Professionelle Schädlingsbekämpfung für Privathaushalte, Gewerbe und Hausverwaltungen in München und Umgebung.</p>
+      </div>
+      <div>
+        <h4>Seiten</h4>
+        <a href="index.html">Startseite</a>
+        <a href="dienstleistungen.html">Unsere Dienstleistungen</a>
+        <a href="haccp.html">HACCP</a>
+        <a href="einsatzorte.html">Unsere Einsatzorte</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="ueber-uns.html">Über uns</a>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <a href="tel:+491603443836">0160 344 38 36</a>
+        <a href="mailto:info@diemuenchnerkammerjaeger.de">info@diemuenchnerkammerjaeger.de</a>
+        <p style="margin-top:8px">DMK – Die Münchner Kammerjäger<br>Lochhammer Schlag 12<br>82166 Gräfelfing</p>
+        <p style="margin-top:8px">Mo – Fr 08:00 – 20:00 Uhr<br>Sa – So Notdienst-Einsatz</p>
+      </div>
+    </div>
+    <div class="unten">
+      <span>© 2026 DMK – Die Münchner Kammerjäger. Alle Rechte vorbehalten.</span>
+      <span>Inhaber: Selcuk Kirci</span>
+    </div>
+  </div>
+</footer>
+<script>
+function burger(b){var p=document.getElementById('mobilepanel');var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));p.style.height=o?'0':'auto';}
+function anfrage(e){e.preventDefault();var f=e.target,z=[];for(var i=0;i<f.elements.length;i++){var el=f.elements[i];if(el.name&&el.value)z.push(el.name+': '+el.value);}
+var l=f.elements['Leistung']?f.elements['Leistung'].value:'';
+window.location.href='mailto:info@diemuenchnerkammerjaeger.de?subject='+encodeURIComponent('Anfrage Schädlingsbekämpfung — '+l)+'&body='+encodeURIComponent(z.join('\n'));return false;}
+var wSchritt=1,wMax=3;
+function wGo(n){var f=document.getElementById('anfrageForm');if(!f)return;var fs=f.querySelectorAll('.schritt-feld');wMax=fs.length;wSchritt=Math.min(Math.max(n,1),wMax);
+for(var i=0;i<fs.length;i++){var an=(i+1)===wSchritt;fs[i].hidden=!an;fs[i].disabled=!an;}
+var st=document.querySelectorAll('#stufen .stufe');for(var j=0;j<st.length;j++){st[j].className='stufe'+((j+1)===wSchritt?' aktiv':((j+1)<wSchritt?' erledigt':''));}
+document.getElementById('wZurueck').hidden=wSchritt===1;document.getElementById('wWeiter').hidden=wSchritt===wMax;document.getElementById('wSenden').hidden=wSchritt!==wMax;
+var r=wMax-wSchritt;document.getElementById('wRest').textContent=r===0?'Letzter Schritt':'Noch '+r+(r===1?' Schritt':' Schritte');}
+function wNaechster(){var fs=document.getElementById('anfrageForm').querySelectorAll('.schritt-feld'),el=fs[wSchritt-1].querySelectorAll('input,select,textarea');
+for(var i=0;i<el.length;i++){if(!el[i].reportValidity())return;}wGo(wSchritt+1);}
+wGo(1);
+</script>
+</body>
+</html>

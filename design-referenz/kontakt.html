@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt — DMK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Manrope:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="nd"><div class="wrap">
+  <span><span class="puls"></span>24-Stunden-Notdienst — auch am Wochenende und an Feiertagen</span>
+  <span>Direkt sprechen: <a href="tel:+491603443836">0160 344 38 36</a></span>
+</div></div>
+<header class="top">
+  <div class="wrap">
+    <a href="index.html" class="logo"><img src="dmk-logo.png" alt="DMK – Die Münchner Kammerjäger" style="height:58px;width:auto"></a>
+    <nav class="navlinks">
+      <a href="index.html">Startseite</a>
+            <a href="dienstleistungen.html">Unsere Dienstleistungen</a>
+            <a href="haccp.html">HACCP</a>
+            <a href="einsatzorte.html">Unsere Einsatzorte</a>
+            <a href="kontakt.html" aria-current="page">Kontakt</a>
+            <a href="ueber-uns.html">Über uns</a>
+    </nav>
+    <a class="btn sm" href="kontakt.html">Kostenlose Einschätzung</a>
+    <button class="burger" aria-expanded="false" aria-label="Menü öffnen" onclick="burger(this)"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobilepanel" id="mobilepanel">
+    <nav>
+      <a href="index.html">Startseite</a>
+            <a href="dienstleistungen.html">Unsere Dienstleistungen</a>
+            <a href="haccp.html">HACCP</a>
+            <a href="einsatzorte.html">Unsere Einsatzorte</a>
+            <a href="kontakt.html" aria-current="page">Kontakt</a>
+            <a href="ueber-uns.html">Über uns</a>
+      <a class="btn" href="kontakt.html">Kostenlose Einschätzung</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="kopf">
+        <div class="wrap stack">
+          <span class="kicker" >
+            Kontakt
+          </span>
+          <h1>Schnell erklärt, schnell gelöst.</h1>
+          <p class="lead" style="max-width:60ch" >
+            Rufen Sie an oder schreiben Sie uns. Sie erhalten in der Regel binnen einer Stunde eine
+            Rückmeldung mit Terminvorschlag und Festpreis.
+          </p>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap raster-2">
+          <div class="karte rand" id="anfrage">
+            <h3 style="margin-bottom:4px">Kostenlose Einschätzung anfragen</h3>
+            <p style="font-size:14px;line-height:20px;margin-bottom:16px">
+              Je genauer Ihre Angaben, desto präziser die Einschätzung.
+            </p>
+            <form class="form" onsubmit="return anfrage(event)">
+        <label>Vorname*<input name="Vorname" required placeholder="Ihr Vorname"></label>
+        <label>Nachname*<input name="Nachname" required placeholder="Ihr Nachname"></label>
+        <label>Telefon*<input name="Telefon" required placeholder="Für den Rückruf"></label>
+        <label>E-Mail*<input name="E-Mail" type="email" required placeholder="name@beispiel.de"></label>
+        <label>Schädling / Leistung*<select name="Leistung" required>
+          <option value="" disabled selected>Bitte wählen</option>
+          <option>Rattenbekämpfung</option>
+          <option>Mäusebekämpfung</option>
+          <option>Bettwanzenbekämpfung</option>
+          <option>Wespenbekämpfung</option>
+          <option>Ameisenbekämpfung</option>
+          <option>Fliegenbekämpfung</option>
+          <option>Mardervergrämung</option>
+          <option>Taubenvergrämung</option>
+          <option>Wespennest-Entfernung</option>
+          <option>Ungezieferbekämpfung</option>
+          <option>Desinfektion</option>
+          <option>HACCP-Monitoring</option>
+          <option>Weiß ich nicht — bitte beraten</option>
+        </select></label>
+        <label>Wunschtermin<input name="Wunschtermin" type="date"></label>
+        <label>Adresse / PLZ*<input name="Adresse" required placeholder="Straße, PLZ, Ort"></label>
+        <label>Objektart*<select name="Objektart" required>
+          <option>Privathaushalt</option><option>Gewerbe / Industrie</option><option>Gastronomie / Lebensmittel</option><option>Hausverwaltung</option>
+        </select></label>
+        <label class="span2">Was beobachten Sie?<textarea name="Beschreibung" rows="3" placeholder="Seit wann, in welchem Raum, wie viele Tiere? Je genauer, desto besser können wir einschätzen."></textarea></label>
+        <button class="btn span2" type="submit" style="margin-top:4px">Anfrage absenden</button>
+      </form>
+      <p style="margin-top:10px;font-size:12px;line-height:16px;color:#868685">Mit dem Absenden öffnet sich Ihr E-Mail-Programm mit der vorbereiteten Anfrage. Ihre Daten werden ausschließlich zur Bearbeitung verwendet — siehe <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+          </div>
+          <div class="stack" style="gap:24px;width:100%">
+            <div class="karte grau" style="width:100%">
+              <h3 style="margin-bottom:14px">Direkt erreichbar</h3>
+              <dl class="infozeile">
+                <dt>Telefon</dt>
+                <dd>
+                  <a href="tel:+491603443836" style="font-weight:600;text-decoration:none">
+                    0160 344 38 36
+                  </a>
+                </dd>
+                <dt>E-Mail</dt>
+                <dd>
+                  <a href="mailto:info@diemuenchnerkammerjaeger.de">info@diemuenchnerkammerjaeger.de</a>
+                </dd>
+                <dt>Ansprechpartner</dt>
+                <dd>Selcuk Kirci</dd>
+                <dt>Anschrift</dt>
+                <dd>
+                  DMK – Die Münchner Kammerjäger
+                  <br />
+                  Lochhammer Schlag 12
+                  <br />
+                  82166 Gräfelfing
+                </dd>
+              </dl>
+            </div>
+            <div class="karte grau" style="width:100%">
+              <h3 style="margin-bottom:14px">Geschäftszeiten</h3>
+              <dl class="infozeile">
+                <dt>Montag – Freitag</dt>
+                <dd>08:00 bis 20:00 Uhr</dd>
+                <dt>Samstag – Sonntag</dt>
+                <dd>Notdienst-Einsatz</dd>
+              </dl>
+              <p style="margin-top:14px;font-size:14px;line-height:20px">
+                Bei akutem Befall erreichen Sie uns auch außerhalb der Geschäftszeiten über den Notdienst.
+              </p>
+            </div>
+            <div style="border-radius:24px;overflow:hidden;height:240px;width:100%">
+              <div class="imgslot" role="img" aria-label="Optional: Kartenausschnitt Gräfelfing / Anfahrt (ca. 1200×600)"><span>Optional: Kartenausschnitt Gräfelfing / Anfahrt (ca. 1200×600)</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+</main>
+<footer class="fuss">
+  <div class="wrap">
+    <div class="spalten">
+      <div>
+        <img src="dmk-logo.png" alt="DMK – Die Münchner Kammerjäger">
+        <p style="margin-top:16px;max-width:34ch">Professionelle Schädlingsbekämpfung für Privathaushalte, Gewerbe und Hausverwaltungen in München und Umgebung.</p>
+      </div>
+      <div>
+        <h4>Seiten</h4>
+        <a href="index.html">Startseite</a>
+        <a href="dienstleistungen.html">Unsere Dienstleistungen</a>
+        <a href="haccp.html">HACCP</a>
+        <a href="einsatzorte.html">Unsere Einsatzorte</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="ueber-uns.html">Über uns</a>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <a href="tel:+491603443836">0160 344 38 36</a>
+        <a href="mailto:info@diemuenchnerkammerjaeger.de">info@diemuenchnerkammerjaeger.de</a>
+        <p style="margin-top:8px">DMK – Die Münchner Kammerjäger<br>Lochhammer Schlag 12<br>82166 Gräfelfing</p>
+        <p style="margin-top:8px">Mo – Fr 08:00 – 20:00 Uhr<br>Sa – So Notdienst-Einsatz</p>
+      </div>
+    </div>
+    <div class="unten">
+      <span>© 2026 DMK – Die Münchner Kammerjäger. Alle Rechte vorbehalten.</span>
+      <span>Inhaber: Selcuk Kirci</span>
+    </div>
+  </div>
+</footer>
+<script>
+function burger(b){var p=document.getElementById('mobilepanel');var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));p.style.height=o?'0':'auto';}
+function anfrage(e){e.preventDefault();var f=e.target,z=[];for(var i=0;i<f.elements.length;i++){var el=f.elements[i];if(el.name&&el.value)z.push(el.name+': '+el.value);}
+var l=f.elements['Leistung']?f.elements['Leistung'].value:'';
+window.location.href='mailto:info@diemuenchnerkammerjaeger.de?subject='+encodeURIComponent('Anfrage Schädlingsbekämpfung — '+l)+'&body='+encodeURIComponent(z.join('\n'));return false;}
+</script>
+</body>
+</html>
