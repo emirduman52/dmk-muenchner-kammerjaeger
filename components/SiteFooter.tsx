@@ -1,5 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+// Siehe SiteHeader: Import statt Pfad-Zeichenkette, damit der Unterordner der
+// Vorschau-Adresse automatisch ergänzt wird.
+import logo from "@/public/dmk-logo.png";
 import { TELEFON, TELEFON_HREF, EMAIL } from "@/lib/content";
 
 export default function SiteFooter() {
@@ -8,7 +11,7 @@ export default function SiteFooter() {
       <div className="wrap">
         <div className="spalten">
           <div>
-            <Image src="/dmk-logo.png" alt="DMK – Die Münchner Kammerjäger" width={200} height={64} style={{ height: 64, width: "auto" }} />
+            <Image src={logo} alt="DMK – Die Münchner Kammerjäger" width={200} height={64} style={{ height: 64, width: "auto" }} />
             <p style={{ marginTop: 16, maxWidth: "34ch" }}>
               Professionelle Schädlingsbekämpfung für Privathaushalte, Gewerbe und Hausverwaltungen in München und Umgebung.
             </p>

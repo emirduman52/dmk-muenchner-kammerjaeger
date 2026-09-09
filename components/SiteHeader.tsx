@@ -3,6 +3,9 @@
 import { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+// Als Import statt als Pfad-Zeichenkette: nur so ergänzt Next.js den Unterordner
+// der Vorschau-Adresse automatisch. Mit "/dmk-logo.png" bliebe das Bild dort leer.
+import logo from "@/public/dmk-logo.png";
 import { usePathname } from "next/navigation";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { TELEFON, TELEFON_HREF } from "@/lib/content";
@@ -69,7 +72,7 @@ export default function SiteHeader() {
       <header className="top" ref={headerRef}>
         <div className="wrap">
           <Link href="/" className="logo" onClick={() => setOpen(false)}>
-            <Image src="/dmk-logo.png" alt="DMK – Die Münchner Kammerjäger" width={180} height={58} priority style={{ height: 58, width: "auto" }} />
+            <Image src={logo} alt="DMK – Die Münchner Kammerjäger" width={180} height={58} priority style={{ height: 58, width: "auto" }} />
           </Link>
           <nav className="navlinks">
             {links.map((l) => (
