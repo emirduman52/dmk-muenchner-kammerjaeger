@@ -55,10 +55,6 @@ export default function UeberUns() {
                 <b>✓</b>
                 <span>Dokumentation für Vermieter, Behörden und Audits</span>
               </li>
-              <li>
-                <b>✓</b>
-                <span>Nachkontrolle inklusive</span>
-              </li>
             </ul>
           </div>
         </Reveal>

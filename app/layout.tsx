@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s — DMK Die Münchner Kammerjäger",
   },
   description:
-    "Professionelle Schädlingsbekämpfung für Privathaushalte, Gewerbe und Hausverwaltungen in München und Umgebung. Festpreis vor dem Termin, Nachkontrolle inklusive.",
+    "Professionelle Schädlingsbekämpfung für Privathaushalte, Gewerbe und Hausverwaltungen in München und Umgebung. Festpreis vor dem Termin, Dokumentation inklusive.",
   ...(istVorschau && {
     robots: { index: false, follow: false, nocache: true },
   }),

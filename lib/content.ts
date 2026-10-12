@@ -7,7 +7,7 @@ export type Leistung = { titel: string; text: string };
 export const leistungen: Leistung[] = [
   { titel: "Rattenbekämpfung", text: "Ratten hinterlassen Fraßschäden und Krankheitserreger. Wir bekämpfen den Befall und schließen die Zugänge." },
   { titel: "Mäusebekämpfung", text: "Mäuse vermehren sich schnell. Wir finden Nester und Laufwege und sichern das Gebäude ab." },
-  { titel: "Bettwanzenbekämpfung", text: "Diskret und gründlich — inklusive Nachkontrolle, damit auch die Eier nicht überleben." },
+  { titel: "Bettwanzenbekämpfung", text: "Diskret und gründlich behandelt — damit auch die Eier nicht überleben." },
   { titel: "Wespenbekämpfung", text: "Nester an Balkon, Rollokasten oder Dach entfernen wir sicher, ohne Sie in Gefahr zu bringen." },
   { titel: "Ameisenbekämpfung", text: "Wir behandeln die Straßen und das Nest, nicht nur die Tiere, die Sie sehen." },
   { titel: "Fliegenbekämpfung", text: "Ursachenbekämpfung statt Spray: Brutstätten finden, entfernen, Wiederbefall verhindern." },

@@ -45,10 +45,6 @@ export default function Startseite() {
                 <b>✓</b>
                 <span>Dokumentation für Vermieter, Behörden und Audits</span>
               </div>
-              <div>
-                <b>✓</b>
-                <span>Nachkontrolle inklusive</span>
-              </div>
             </div>
           </div>
           <div className="karte" id="anfrage" data-hero="card">

@@ -60,10 +60,10 @@ export default function Dienstleistungen() {
           <Reveal selector="[data-reveal]" as="div">
             <div className="stack" style={{ gap: 12, marginBottom: 28 }} data-reveal>
               <span className="kicker">Was Sie von uns erwarten können</span>
-              <h2>Vier Zusagen, an denen Sie uns messen können.</h2>
+              <h2>Drei Zusagen, an denen Sie uns messen können.</h2>
             </div>
           </Reveal>
-          <Reveal className="raster" selector=".karte" stagger={0.09} y={36}>
+          <Reveal className="raster-3" selector=".karte" stagger={0.09} y={36}>
             <div className="karte">
               <h4>Festpreis vor dem Termin</h4>
               <p style={{ fontSize: 14, lineHeight: "20px", marginTop: 8 }}>
@@ -80,12 +80,6 @@ export default function Dienstleistungen() {
               <h4>Dokumentation inklusive</h4>
               <p style={{ fontSize: 14, lineHeight: "20px", marginTop: 8 }}>
                 Nachweise für Vermieter, Behörden und Audits erhalten Sie schriftlich.
-              </p>
-            </div>
-            <div className="karte">
-              <h4>Nachkontrolle inklusive</h4>
-              <p style={{ fontSize: 14, lineHeight: "20px", marginTop: 8 }}>
-                Wir prüfen nach, ob der Befall wirklich beseitigt ist — nicht nur beruhigt.
               </p>
             </div>
           </Reveal>

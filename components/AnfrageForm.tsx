@@ -30,6 +30,10 @@ export default function AnfrageForm() {
           Nachname*
           <input name="Nachname" required placeholder="Ihr Nachname" />
         </label>
+        <label className="span2">
+          Firma
+          <input name="Firma" placeholder="Nur bei Gewerbe oder Hausverwaltung" />
+        </label>
         <label>
           Telefon*
           <input name="Telefon" required placeholder="Für den Rückruf" />
