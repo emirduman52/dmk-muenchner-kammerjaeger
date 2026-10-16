@@ -20,6 +20,8 @@ export default function SiteFooter() {
             <h4>Seiten</h4>
             <Link href="/">Startseite</Link>
             <Link href="/dienstleistungen">Unsere Dienstleistungen</Link>
+            <Link href="/preise">Preise</Link>
+            <Link href="/haeufige-fragen">Häufige Fragen</Link>
             <Link href="/haccp">HACCP</Link>
             <Link href="/einsatzorte">Unsere Einsatzorte</Link>
             <Link href="/kontakt">Kontakt</Link>

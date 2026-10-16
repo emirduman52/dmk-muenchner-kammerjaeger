@@ -181,6 +181,16 @@ export default async function SchaedlingSeite({ params }: { params: Promise<{ sl
               </details>
             ))}
           </Reveal>
+          <Reveal selector="[data-reveal]" as="div">
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 20 }} data-reveal>
+              <Link className="btn linie sm" href="/preise">
+                So entsteht unser Festpreis
+              </Link>
+              <Link className="btn linie sm" href="/haeufige-fragen">
+                Alle häufigen Fragen
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
 

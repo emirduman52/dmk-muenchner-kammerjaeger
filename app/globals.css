@@ -192,6 +192,7 @@ header.top .logo img { height: 58px; width: auto; display: block; }
 /* FAQ (aufklappbar) */
 .faq { display: flex; flex-direction: column; gap: 10px; }
 .faq details { background: #fff; border-radius: 16px; padding: 4px 20px; }
+.faq.faq-grau details { background: var(--grau); }
 .faq summary {
   cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;
   font: 600 16px/24px var(--font-sans); color: var(--schwarz); padding: 14px 0;
