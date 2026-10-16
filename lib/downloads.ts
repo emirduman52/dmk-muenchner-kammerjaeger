@@ -35,16 +35,4 @@ export const downloadGruppen: DownloadGruppe[] = [
       },
     ],
   },
-  {
-    titel: "Vorlagen",
-    einleitung: "Zum Ausfüllen und Anpassen — spart Hausverwaltungen Zeit.",
-    eintraege: [
-      {
-        titel: "Aushang für Mieter: Schädlingsbekämpfung im Haus",
-        text: "Vorlage zur Information der Bewohner über einen Einsatz. Felder ausfüllen, ausdrucken, aushängen.",
-        datei: "/downloads/dmk-aushang-vorlage-mieter.docx",
-        format: "Word · bearbeitbar",
-      },
-    ],
-  },
 ];

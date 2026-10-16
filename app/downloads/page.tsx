@@ -9,7 +9,7 @@ import { dateiHref, downloadGruppen } from "@/lib/downloads";
 export const metadata: Metadata = {
   title: "Downloads",
   description:
-    "Flyer und Vorlagen zum Herunterladen: Schädlingsbekämpfung für Hausverwaltungen, Gastronomie und Hotellerie sowie Gewerbe und Industrie.",
+    "Flyer zum Herunterladen: Schädlingsbekämpfung für Hausverwaltungen, Gastronomie und Hotellerie sowie Gewerbe und Industrie.",
 };
 
 export default function Downloads() {
@@ -20,7 +20,7 @@ export default function Downloads() {
           <span className="kicker hell" data-hero="kicker">
             Downloads
           </span>
-          <h1>Flyer und Vorlagen zum Herunterladen.</h1>
+          <h1>Unsere Flyer zum Herunterladen.</h1>
           <p className="lead" style={{ maxWidth: "62ch" }} data-hero="lead">
             Alles Wichtige kompakt zum Ausdrucken, Weitergeben und Ablegen. Weitere Unterlagen, etwa
             Sicherheitsdatenblätter zu den eingesetzten Mitteln, senden wir Ihnen auf Anfrage gern zu.
