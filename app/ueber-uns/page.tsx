@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 export default function UeberUns() {
   return (
     <>
-      <section className="kopf">
+      <section className="kopf dunkel">
         <HeroIntro className="wrap stack">
-          <span className="kicker" data-hero="kicker">
+          <span className="kicker hell" data-hero="kicker">
             Über uns
           </span>
           <h1>Wir sind Ihr zuverlässiger Ansprechpartner für professionelle Schädlingsbekämpfung.</h1>

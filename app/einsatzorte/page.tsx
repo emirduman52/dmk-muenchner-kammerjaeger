@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 export default function Einsatzorte() {
   return (
     <>
-      <section className="kopf">
+      <section className="kopf dunkel">
         <HeroIntro className="wrap stack">
-          <span className="kicker" data-hero="kicker">
+          <span className="kicker hell" data-hero="kicker">
             Unsere Einsatzorte
           </span>
           <h1>Ihr zuverlässiger Ansprechpartner in München und Umgebung.</h1>
@@ -28,7 +28,7 @@ export default function Einsatzorte() {
             <a className="btn" href={TELEFON_HREF}>
               Jetzt anrufen: {TELEFON}
             </a>
-            <Link className="btn linie" href="/kontakt">
+            <Link className="btn dunkel" href="/kontakt">
               Verfügbarkeit prüfen
             </Link>
           </div>

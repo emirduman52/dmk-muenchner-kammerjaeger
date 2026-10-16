@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 export default function Kontakt() {
   return (
     <>
-      <section className="kopf">
+      <section className="kopf dunkel">
         <HeroIntro className="wrap stack">
-          <span className="kicker" data-hero="kicker">
+          <span className="kicker hell" data-hero="kicker">
             Kontakt
           </span>
           <h1>Schnell erklärt, schnell gelöst.</h1>
