@@ -4,7 +4,7 @@ import HeroIntro from "@/components/anim/HeroIntro";
 import Reveal from "@/components/anim/Reveal";
 import ImageSlot from "@/components/ImageSlot";
 import CtaBand from "@/components/CtaBand";
-import { TELEFON, TELEFON_HREF, leistungen } from "@/lib/content";
+import { TELEFON, TELEFON_HREF, leistungen, leistungHref } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Unsere Dienstleistungen",
@@ -40,17 +40,29 @@ export default function Dienstleistungen() {
       <section className="band">
         <div className="wrap">
           <Reveal className="raster-3" selector=".leistung" stagger={0.06} y={44}>
-            {leistungen.map((l) => (
-              <div className="leistung" key={l.titel}>
-                <div className="bild" style={{ height: 190 }}>
-                  <ImageSlot label={`Foto: ${l.titel}`} />
+            {leistungen.map((l) => {
+              const href = leistungHref(l);
+              const inhalt = (
+                <>
+                  <div className="bild" style={{ height: 190 }}>
+                    <ImageSlot label={`Foto: ${l.titel}`} />
+                  </div>
+                  <div className="txt">
+                    <h4>{l.titel}</h4>
+                    <p>{l.text}</p>
+                  </div>
+                </>
+              );
+              return href ? (
+                <Link href={href} className="leistung" key={l.titel} style={{ color: "inherit" }}>
+                  {inhalt}
+                </Link>
+              ) : (
+                <div className="leistung" key={l.titel}>
+                  {inhalt}
                 </div>
-                <div className="txt">
-                  <h4>{l.titel}</h4>
-                  <p>{l.text}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </Reveal>
         </div>
       </section>

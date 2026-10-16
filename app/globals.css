@@ -178,6 +178,29 @@ header.top .logo img { height: 58px; width: auto; display: block; }
 .btn[hidden] { display: none; }
 .wizard-nav .rest { font: 600 12px/16px var(--font-sans); color: #868685; white-space: nowrap; }
 
+/* Notdienst-Streifen (akuter Befall) */
+.notdienst { background: var(--gelb); color: var(--schwarz); }
+.notdienst .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px 32px; flex-wrap: wrap; padding: 18px 24px; }
+.notdienst strong { display: block; font: 800 20px/28px var(--font-display); }
+.notdienst p { margin: 2px 0 0; font-size: 14px; line-height: 20px; max-width: 52ch; }
+.notdienst-aktionen { display: flex; gap: 10px; flex-wrap: wrap; }
+.notdienst .btn { background: var(--schwarz); color: #fff; }
+.notdienst .btn:hover { background: #000; color: #fff; box-shadow: 0 8px 20px rgba(14, 15, 12, 0.25); }
+.notdienst .btn.linie { background: transparent; color: var(--schwarz); border-color: var(--schwarz); }
+.notdienst .btn.linie:hover { background: rgba(14, 15, 12, 0.08); color: var(--schwarz); box-shadow: none; }
+
+/* FAQ (aufklappbar) */
+.faq { display: flex; flex-direction: column; gap: 10px; }
+.faq details { background: #fff; border-radius: 16px; padding: 4px 20px; }
+.faq summary {
+  cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  font: 600 16px/24px var(--font-sans); color: var(--schwarz); padding: 14px 0;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font: 600 22px/1 var(--font-sans); color: var(--gelb-tief); flex-shrink: 0; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { margin: 0 0 16px; font-size: 15px; line-height: 24px; }
+
 /* Foto-Auswahl (optional) */
 .foto-feld { display: flex; flex-direction: column; gap: 4px; }
 .foto-titel { font: 600 12px/16px var(--font-sans); color: var(--schwarz); }
@@ -222,6 +245,9 @@ header.top .logo img { height: 58px; width: auto; display: block; }
 .liste li { display: flex; gap: 10px; font-size: 16px; line-height: 24px; }
 .liste b { color: var(--gelb-tief); }
 .band.dunkel .liste b { color: var(--gelb); }
+/* HACCP-Streifen: Liste mittig zum Text links, mit etwas mehr Abstand zwischen den Punkten */
+.band.dunkel .raster-2 { align-items: center; }
+.band.dunkel .raster-2 .liste { gap: 16px; padding-left: 24px; }
 
 .orte { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .orte span {
@@ -289,6 +315,7 @@ footer.fuss .unten { border-top: 1px solid var(--linie); margin-top: 36px; paddi
   h2 { font-size: 32px; }
   .raster, .vertrauen { grid-template-columns: repeat(2, 1fr); }
   .raster-3, .raster-2, .schritte, .orte { grid-template-columns: 1fr; }
+  .band.dunkel .raster-2 .liste { padding-left: 0; }
   .schritte .verbindung { display: none; }
   .cta { grid-template-columns: 1fr; padding: 32px; }
   footer.fuss .spalten { grid-template-columns: 1fr 1fr; }

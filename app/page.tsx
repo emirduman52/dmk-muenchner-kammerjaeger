@@ -9,7 +9,8 @@ import ImageSlot from "@/components/ImageSlot";
 import AnfrageForm from "@/components/AnfrageForm";
 import Schritte from "@/components/Schritte";
 import CtaBand from "@/components/CtaBand";
-import { TELEFON, TELEFON_HREF, leistungen } from "@/lib/content";
+import NotdienstBand from "@/components/NotdienstBand";
+import { TELEFON, TELEFON_HREF, leistungen, leistungHref } from "@/lib/content";
 
 export default function Startseite() {
   return (
@@ -60,6 +61,8 @@ export default function Startseite() {
           </div>
         </HeroIntro>
       </section>
+
+      <NotdienstBand />
 
       <section className="band">
         <Reveal className="wrap raster-2" stagger={0.15}>
@@ -125,7 +128,7 @@ export default function Startseite() {
           </Reveal>
           <Reveal className="raster" selector=".leistung" stagger={0.06} y={44}>
             {leistungen.slice(0, 8).map((l) => (
-              <Link href="/dienstleistungen" className="leistung" key={l.titel} style={{ color: "inherit" }}>
+              <Link href={leistungHref(l) ?? "/dienstleistungen"} className="leistung" key={l.titel} style={{ color: "inherit" }}>
                 <div className="bild">
                   <ImageSlot label={`Foto: ${l.titel}`} />
                 </div>
