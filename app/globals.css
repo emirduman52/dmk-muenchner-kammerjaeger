@@ -187,17 +187,17 @@ header.top .logo img { height: 58px; width: auto; display: block; }
 .cta p { color: #d8d8d4; }
 
 /* Footer */
-footer.fuss { background: var(--schwarz); color: #c9c9c4; padding: 56px 0 32px; font-size: 14px; line-height: 22px; }
+footer.fuss { background: #fff; color: #4a4a46; border-top: 1px solid var(--linie); padding: 56px 0 32px; font-size: 14px; line-height: 22px; }
 footer.fuss .spalten { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.1fr; gap: 32px; }
 /* Grid-Spalten dürfen schmaler werden als ihr längstes Wort, sonst sprengt die
    lange E-Mail-Adresse das Raster und die Seite wird horizontal scrollbar. */
 footer.fuss .spalten > * { min-width: 0; }
-footer.fuss h4 { color: #fff; margin-bottom: 12px; }
-footer.fuss a { color: #c9c9c4; text-decoration: none; display: block; padding: 3px 0; transition: color 0.2s ease; overflow-wrap: anywhere; }
+footer.fuss h4 { color: var(--schwarz); margin-bottom: 12px; }
+footer.fuss a { color: #4a4a46;text-decoration: none; display: block; padding: 3px 0; transition: color 0.2s ease; overflow-wrap: anywhere; }
 footer.fuss p { overflow-wrap: anywhere; }
-footer.fuss a:hover { color: var(--gelb); }
-footer.fuss img { height: 64px; width: auto; background: #fff; border-radius: 12px; padding: 6px; }
-footer.fuss .unten { border-top: 1px solid #2a2b28; margin-top: 36px; padding-top: 20px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; color: #8f8f8a; }
+footer.fuss a:hover { color: var(--schwarz); text-decoration: underline; text-decoration-color: var(--gelb); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+footer.fuss img { height: 64px; width: auto; }
+footer.fuss .unten { border-top: 1px solid var(--linie); margin-top: 36px; padding-top: 20px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; color: #6b6b66; }
 
 /* Rechtstexte */
 .rechtstext { max-width: 820px; }
