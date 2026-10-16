@@ -45,9 +45,9 @@ export default function Einsatzorte() {
           <Reveal className="orte" selector=":scope > span" stagger={0.05} y={24}>
             <span>München Stadtgebiet</span>
             <span>Landkreis München</span>
-            <span>82166 Gräfelfing</span>
-            <span>82362 Weilheim in Oberbayern</span>
-            <span>85457 Wörth</span>
+            <span>Gräfelfing</span>
+            <span>Weilheim in Oberbayern</span>
+            <span>Wörth</span>
             <span>Oberbayern</span>
             <span>Niederbayern</span>
             <span>Umliegende Städte und Gemeinden</span>
