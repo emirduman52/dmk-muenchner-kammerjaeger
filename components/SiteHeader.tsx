@@ -10,11 +10,23 @@ import { usePathname } from "next/navigation";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { TELEFON, TELEFON_HREF } from "@/lib/content";
 
-const links = [
+type NavLink = { href: string; label: string; kinder?: { href: string; label: string }[] };
+
+const links: NavLink[] = [
   { href: "/", label: "Startseite" },
   { href: "/dienstleistungen", label: "Unsere Dienstleistungen" },
-  { href: "/haccp", label: "HACCP" },
+  {
+    href: "/branchen",
+    label: "Branchen",
+    kinder: [
+      { href: "/branchen/hausverwaltungen", label: "Hausverwaltungen" },
+      { href: "/branchen/gastronomie-hotellerie", label: "Gastronomie & Hotellerie" },
+      { href: "/branchen/gewerbe-industrie", label: "Gewerbe & Industrie" },
+      { href: "/haccp", label: "HACCP für Lebensmittelbetriebe" },
+    ],
+  },
   { href: "/einsatzorte", label: "Unsere Einsatzorte" },
+  { href: "/downloads", label: "Downloads" },
   { href: "/kontakt", label: "Kontakt" },
   { href: "/ueber-uns", label: "Über uns" },
 ];
@@ -55,6 +67,9 @@ export default function SiteHeader() {
 
   const current = (href: string) =>
     (href === "/" ? pathname === "/" : pathname.startsWith(href)) ? "page" : undefined;
+  // Ein Menüpunkt mit Unterpunkten gilt auch als aktiv, wenn einer seiner Unterpunkte offen ist.
+  const aktiv = (l: NavLink) =>
+    current(l.href) || l.kinder?.some((k) => current(k.href)) ? ("page" as const) : undefined;
 
   return (
     <>
@@ -75,11 +90,26 @@ export default function SiteHeader() {
             <Image src={logo} alt="DMK – Die Münchner Kammerjäger" width={180} height={58} priority style={{ height: 58, width: "auto" }} />
           </Link>
           <nav className="navlinks">
-            {links.map((l) => (
-              <Link key={l.href} href={l.href} aria-current={current(l.href)}>
-                {l.label}
-              </Link>
-            ))}
+            {links.map((l) =>
+              l.kinder ? (
+                <div className="menue" key={l.href}>
+                  <Link href={l.href} aria-current={aktiv(l)}>
+                    {l.label}
+                  </Link>
+                  <div className="untermenue">
+                    {l.kinder.map((k) => (
+                      <Link key={k.href} href={k.href} aria-current={current(k.href)}>
+                        {k.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link key={l.href} href={l.href} aria-current={current(l.href)}>
+                  {l.label}
+                </Link>
+              ),
+            )}
           </nav>
           <Link className="btn sm" href="/kontakt">
             Kostenlose Einschätzung
@@ -98,9 +128,22 @@ export default function SiteHeader() {
         <div className="mobilepanel" ref={panelRef}>
           <nav>
             {links.map((l) => (
-              <Link key={l.href} href={l.href} aria-current={current(l.href)} onClick={() => setOpen(false)}>
-                {l.label}
-              </Link>
+              <div key={l.href} style={{ display: "contents" }}>
+                <Link href={l.href} aria-current={aktiv(l)} onClick={() => setOpen(false)}>
+                  {l.label}
+                </Link>
+                {l.kinder?.map((k) => (
+                  <Link
+                    key={k.href}
+                    className="unterpunkt"
+                    href={k.href}
+                    aria-current={current(k.href)}
+                    onClick={() => setOpen(false)}
+                  >
+                    {k.label}
+                  </Link>
+                ))}
+              </div>
             ))}
             <Link className="btn" href="/kontakt" onClick={() => setOpen(false)}>
               Kostenlose Einschätzung

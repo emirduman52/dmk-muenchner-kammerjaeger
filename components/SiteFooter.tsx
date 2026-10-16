@@ -21,6 +21,7 @@ export default function SiteFooter() {
             <Link href="/">Startseite</Link>
             <Link href="/dienstleistungen">Unsere Dienstleistungen</Link>
             <Link href="/branchen">Branchenlösungen</Link>
+            <Link href="/downloads">Downloads</Link>
             <Link href="/preise">Preise</Link>
             <Link href="/haeufige-fragen">Häufige Fragen</Link>
             <Link href="/haccp">HACCP</Link>

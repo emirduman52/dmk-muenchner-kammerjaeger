@@ -90,6 +90,19 @@ header.top .logo img { height: 58px; width: auto; display: block; }
 .navlinks a:hover { color: var(--gelb-tief); }
 .navlinks a:hover::after { right: 0; }
 .navlinks a[aria-current]::after { right: 0; }
+/* Aufklappmenü "Branchen": öffnet bei Hover und bei Tastaturfokus */
+.menue { position: relative; }
+.menue > a::before { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 14px; }
+.untermenue {
+  position: absolute; top: calc(100% + 10px); left: -14px; min-width: 250px; padding: 8px;
+  background: #fff; border: 1px solid var(--linie); border-radius: 14px; box-shadow: 0 14px 36px rgba(14, 15, 12, 0.12);
+  display: none; flex-direction: column; z-index: 40;
+}
+.menue:hover .untermenue, .menue:focus-within .untermenue { display: flex; }
+.untermenue a { padding: 9px 12px; border-radius: 10px; white-space: nowrap; }
+.untermenue a::after { display: none; }
+.untermenue a:hover { background: var(--grau); }
+.untermenue a[aria-current] { color: var(--gelb-tief); }
 
 /* Mobile Navigation */
 .burger { display: none; margin-left: auto; width: 44px; height: 44px; border: 1px solid var(--linie); border-radius: 12px; background: #fff; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
@@ -101,6 +114,7 @@ header.top .logo img { height: 58px; width: auto; display: block; }
 .mobilepanel nav { display: flex; flex-direction: column; padding: 8px 24px 20px; }
 .mobilepanel a { font-size: 17px; line-height: 24px; font-weight: 600; color: var(--schwarz); text-decoration: none; padding: 12px 0; border-bottom: 1px solid var(--grau); }
 .mobilepanel a[aria-current] { color: var(--gelb-tief); }
+.mobilepanel a.unterpunkt { font-size: 15px; font-weight: 500; padding-left: 20px; }
 .mobilepanel .btn { margin-top: 16px; border-bottom: 0; }
 
 /* Hero */

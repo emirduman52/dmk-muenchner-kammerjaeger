@@ -17,6 +17,8 @@ const nextConfig: NextConfig = istVorschau
       // GitHub Pages hat keine Bildoptimierung — Bilder werden unverändert ausgeliefert.
       images: { unoptimized: true },
       trailingSlash: true,
+      // Für Dateilinks (PDF-Downloads), die nicht über next/link laufen — siehe lib/downloads.ts
+      env: { NEXT_PUBLIC_BASE_PATH: `/${repoName}` },
     }
   : {};
 
