@@ -9,7 +9,7 @@ import { TELEFON, TELEFON_HREF, EMAIL } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "DMK – Die Münchner Kammerjäger ist der Betrieb von Selcuk Kirci. Wer anruft, spricht mit der Person, die anschließend auch vor Ort arbeitet.",
+    "DMK – Die Münchner Kammerjäger ist Ihr Fachbetrieb für Schädlingsbekämpfung in München. Wer anruft, spricht mit dem Team, das anschließend auch vor Ort arbeitet.",
 };
 
 export default function UeberUns() {
@@ -22,8 +22,8 @@ export default function UeberUns() {
           </span>
           <h1>Wir sind Ihr zuverlässiger Ansprechpartner für professionelle Schädlingsbekämpfung.</h1>
           <p className="lead" style={{ maxWidth: "62ch" }} data-hero="lead">
-            DMK – Die Münchner Kammerjäger ist der Betrieb von Selcuk Kirci. Wer anruft, spricht mit der
-            Person, die anschließend auch vor Ort arbeitet.
+            DMK – Die Münchner Kammerjäger ist Ihr Fachbetrieb für Schädlingsbekämpfung in München. Wer
+            anruft, spricht mit dem Team, das anschließend auch vor Ort arbeitet.
           </p>
         </HeroIntro>
       </section>
@@ -32,7 +32,7 @@ export default function UeberUns() {
         <Reveal className="wrap raster-2" stagger={0.15}>
           <div data-reveal style={{ borderRadius: 24, overflow: "hidden", height: 400 }}>
             <Parallax className="h-full">
-              <ImageSlot label="Foto: Selcuk Kirci / Fahrzeug / Team (ca. 1000×1200)" />
+              <ImageSlot label="Foto: Team / Fahrzeug (ca. 1000×1200)" />
             </Parallax>
           </div>
           <div className="stack" data-reveal>
@@ -75,7 +75,7 @@ export default function UeberUns() {
             <h3 style={{ marginBottom: 14 }}>Kontakt</h3>
             <dl className="infozeile">
               <dt>Ansprechpartner</dt>
-              <dd>Selcuk Kirci</dd>
+              <dd>Das DMK-Team</dd>
               <dt>Telefon</dt>
               <dd>
                 <a href={TELEFON_HREF}>{TELEFON}</a>

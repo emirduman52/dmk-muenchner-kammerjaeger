@@ -50,7 +50,7 @@ export default function SiteFooter() {
         </div>
         <div className="unten">
           <span>© 2026 DMK – Die Münchner Kammerjäger. Alle Rechte vorbehalten.</span>
-          <span>Inhaber: Selcuk Kirci</span>
+          <span>Ihr Fachbetrieb für Schädlingsbekämpfung in München</span>
         </div>
       </div>
     </footer>

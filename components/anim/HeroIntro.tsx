@@ -37,10 +37,19 @@ export default function HeroIntro({
         }
 
         if (h1.length) {
-          const split = SplitText.create(h1, { type: "words", mask: "words" });
+          // SplitText nennt die Maske "<wordsClass>-mask" → ".wort-mask" gibt ihr Luft für
+          // Unterlängen und Umlaute (siehe globals.css). Nach der Animation wird die Maske
+          // komplett entfernt, damit nichts abgeschnitten bleibt.
+          const split = SplitText.create(h1, { type: "words", mask: "words", wordsClass: "wort" });
           tl.from(
             split.words,
-            { yPercent: 115, duration: 0.85, stagger: 0.05, ease: "power4.out" },
+            {
+              yPercent: 115,
+              duration: 0.85,
+              stagger: 0.05,
+              ease: "power4.out",
+              onComplete: () => split.revert(),
+            },
             0.15
           );
         }

@@ -51,7 +51,7 @@ export default function Kontakt() {
                   <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
                 </dd>
                 <dt>Ansprechpartner</dt>
-                <dd>Selcuk Kirci</dd>
+                <dd>Das DMK-Team</dd>
                 <dt>Anschrift</dt>
                 <dd>
                   DMK – Die Münchner Kammerjäger

@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
+// Als Import statt Pfad-Zeichenkette, damit der Unterordner der Vorschau-Adresse ergänzt wird.
+import skyline from "@/public/muenchen-skyline.jpg";
 import HeroIntro from "@/components/anim/HeroIntro";
 import Reveal from "@/components/anim/Reveal";
 import Parallax from "@/components/anim/Parallax";
@@ -12,6 +15,7 @@ export default function Startseite() {
   return (
     <>
       <section className="hero">
+        <Image src={skyline} alt="" fill priority sizes="100vw" className="hero-bild" />
         <HeroIntro className="wrap split">
           <div className="stack">
             <span className="kicker hell" data-hero="kicker">
@@ -61,15 +65,15 @@ export default function Startseite() {
         <Reveal className="wrap raster-2" stagger={0.15}>
           <div data-reveal style={{ borderRadius: 24, overflow: "hidden", height: 380 }}>
             <Parallax className="h-full">
-              <ImageSlot label="Foto: Selcuk Kirci oder Team im Einsatz (ca. 1200×1000)" />
+              <ImageSlot label="Foto: Team im Einsatz (ca. 1200×1000)" />
             </Parallax>
           </div>
           <div className="stack" data-reveal>
             <span className="kicker">Über uns</span>
-            <h2>Ein Ansprechpartner, der selbst vor Ort ist.</h2>
+            <h2>Ein Team, das selbst vor Ort ist.</h2>
             <p className="lead">
-              DMK – Die Münchner Kammerjäger ist der Betrieb von Selcuk Kirci. Sie sprechen mit der Person,
-              die anschließend auch bei Ihnen im Haus steht — kein Callcenter, keine wechselnden
+              DMK – Die Münchner Kammerjäger ist Ihr Fachbetrieb für Schädlingsbekämpfung. Sie sprechen mit
+              dem Team, das anschließend auch bei Ihnen im Haus steht — kein Callcenter, keine wechselnden
               Subunternehmer.
             </p>
             <ul className="liste">
